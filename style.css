@@ -1,0 +1,108 @@
+/* Reset e Configurações Básicas */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    overflow: hidden;
+    background-color: #d1fff0;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+/* Estilos do Header */
+header {
+    display: flex;
+    align-items: center; 
+    width: 100vw;
+    height: 70px;
+    padding: 20px;
+    background-color: #fbfbfb;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.062);
+    border-radius: 0px 0px 10px 10px;
+}
+
+header > .logo {
+    display: flex;
+    align-items: center; 
+}
+
+header > .logo > #logo_findanimal {
+    margin-left: 10px; 
+}
+
+header > a {
+    margin-left: auto; 
+    padding: 5px;
+    font-size: 25px;
+    text-decoration: none;
+    color: #000;
+    background-color: #66FAC9;
+    border-radius: 7px;
+    transition: background-color 0.3s ease;
+}
+
+header > a:hover {
+    background-color: #d1fff0;
+}
+
+/* Estilos do Main */
+main {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+main > #img_findanimal {
+    margin-bottom: 50px;
+}
+
+/* Estilos da Seção de Login */
+.login, .register {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.login > label {
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+input {
+    min-width: 200px;
+    height: 25px;
+    border-radius: 0px 7px 0px 7px;
+}
+
+.login > button {
+    min-width: 60px;
+    height: 30px;
+    background-color: #fbfbfb;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    border-radius: 4px;
+    margin-bottom: 60px;
+}
+.login > button:hover {
+    cursor: pointer;
+}
+
+.login > a {
+    text-decoration: underline;
+    color: black;
+}
+
+/* Estilos da Seção de Registro */
+.register > a {
+    color: black;
+    transition: color 0.3s ease; 
+}
+
+.register > a:hover {
+    color: #66FAC9;
+}
