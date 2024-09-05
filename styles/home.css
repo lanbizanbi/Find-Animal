@@ -1,0 +1,112 @@
+body,html{
+    overflow: auto;
+}
+
+header img{
+    margin: 0px 5px;
+}
+header a{
+    text-decoration: none;
+}
+.search-container {
+    display: flex;
+    align-items: center;
+    background-color: #fbfbfb;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    padding: 5px;
+    width:300px
+}
+.search-container label{
+    margin: 0px;
+}
+
+.search-container input {
+    max-width: 300px;
+    border: none;
+    outline: none;
+    flex: 1;
+    border-radius: 25px;    
+    padding: 5px;
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 300,
+  'GRAD' 0,
+  'opsz' 20
+}
+.feed-options .material-symbols-outlined,
+.acount-configurations .material-symbols-outlined {
+    font-size: 34px;
+    padding: 5px 10px;
+    color: #fbfbfb;
+}
+.feed-options .material-symbols-outlined:hover,
+.acount-configurations .material-symbols-outlined:hover{
+    background-color: #d1fff0;
+    border-radius: 5px;
+}
+
+.search-container .material-symbols-outlined {
+    font-size: 24px; 
+}
+.feed-container::-webkit-scrollbar {
+    display: none; /* Oculta a barra de rolagem no WebKit (Chrome, Safari) */
+}
+.feed-container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 70px;
+    max-width: 800px;
+    min-height: 600px;
+    background-color: #fbfbfb;
+    border-radius: 5px;
+    padding: 10px;
+    overflow: auto;
+    
+}
+.feed-container img {
+    margin: 5px;
+    max-width: 100%;
+    max-height: 500px;
+    display: block;
+}
+#img-user{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+.fixed-button {
+    position: fixed; /* Fixa o botão na tela */
+    bottom: 20px; /* Distância da parte inferior da tela */
+    left: 50%; /* Centraliza horizontalmente */
+    transform: translateX(-50%); /* Ajusta a posição para o centro */
+    width: 60px; /* Largura do botão */
+    height: 60px; /* Altura do botão */
+    border-radius: 50%; /* Faz o botão ser redondo */
+    background-color: #199F86; /* Cor de fundo do botão */
+    color: white; /* Cor do texto */
+    border: none; /* Remove a borda padrão */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra do botão */
+    cursor: pointer; /* Muda o cursor para indicar que é clicável */
+    display: flex; /* Usa flexbox para centralizar o conteúdo */
+    align-items: center; /* Centraliza verticalmente */
+    justify-content: center; /* Centraliza horizontalmente */
+    z-index: 1000; /* Garante que o botão esteja acima de outros elementos */
+}
+
+.fixed-button:hover {
+    background-color: #1BBC9B; 
+}
+#footer{
+    margin-top: 10px;
+    background-color: #1BBC9B;
+    height: 200px;
+}
+@media (max-width: 543px){
+    .feed-container{
+        margin-top: 115px;
+    }
+}

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find animal | Cadastro</title>
+    <link rel="stylesheet" href="styles/global.css">
+    <link rel="stylesheet" href="styles/register.css">
+    <link rel="icon" href="icons/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="icons/favicon-16x16.png" sizes="16x16" type="image/png">
+    <link rel="icon" href="icons/favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="apple-touch-icon" sizes="180x180" href="icons/apple-touch-icon.png">
+
+    
+</head>
+<body>
+    <header>
+
+    </header>
+    <main>
+        <img id="img_findanimal" src="img/logo_find_animal350.png" alt="logo_find_animal">
+            <h1>Cadastro</h1>
+            <form id="formregister" action="" method="POST">
+                <div id="infologin">
+                    <label for="remail">Email</label>
+                    <input id="remail" type="email">
+
+                    <label for="rsenha">Senha</label>
+                    <input id="rsenha" type="password">
+
+                    <label for="rconfirmarsenha">Confirme sua senha</label>
+                    <input id="rconfirmarsenha" type="password">
+
+                </div>
+                <div id="infopessoa">
+                    <label for="inome">Nome</label>
+                    <input type="text" id="inome">
+
+                    <label for="inascimento">Data de nascimento</label>
+                    <input type="date" id="inascimento">
+
+                    <label for="iestado">Estado</label>
+                    <select name="estado" id="iestado">
+                        <option value="">Selecione o Estado</option>
+                        <option value="Amazonas">Amazonas</option>
+                        <option value="Pará">Pará</option>
+                        <option value="Amapá">Amapá</option>
+                    </select>
+
+                    <label for="icidade">Cidade</label>
+                    <select name="cidade" id="icidade">
+                        <option value="">Selecione uma cidade</option>
+                    </select>
+
+                </div>
+            
+            </form>
+            <button id="register">Cadastre-se</button>
+    </main>
+    <footer>
+
+    </footer>
+    <script>
+        document.getElementById("register").addEventListener("click", function() {
+            // Redireciona para home.html
+            window.location.href = "login.html"
+        })
+    </script>
+</body>
+</html>

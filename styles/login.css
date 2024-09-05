@@ -1,0 +1,22 @@
+header{
+    display: none;
+}
+.login, .aregister {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.aregister{
+    font-size: 1.2em;
+}
+
+.aregister a {
+    color: black;
+    transition: color 0.3s ease; 
+}
+
+.aregister a:hover {
+    color: #1BBC9B;
+}

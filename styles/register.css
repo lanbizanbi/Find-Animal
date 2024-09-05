@@ -1,0 +1,32 @@
+header{
+    display: none;
+}
+#formregister {
+    min-width: 600px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#infologin, #infopessoa {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+@media (max-width: 610px) {
+
+    body{
+        overflow: auto;
+    }
+    #img_findanimal{
+        margin-top: 200px;
+    }
+    #formregister{
+        flex-direction: column;
+    }
+    main > #formregister> button{
+        margin-top: 10px;
+    }
+}
