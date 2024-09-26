@@ -1,0 +1,26 @@
+main{
+    width: 80%;
+    height: 80%;
+    flex-direction: row;
+    justify-content: space-between;
+}
+h1, h2{
+    color: #1BBC9B;
+    margin: 5px 0px;
+}
+p{
+    font-size: 17px;
+}
+li{
+    margin: 5px 0px
+}
+.contain{
+    margin-left: 20px;
+    max-width: 550px;
+    
+}
+#swiper{
+    width: 200px;
+    height: 200px;
+    background-color: red;
+}
