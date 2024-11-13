@@ -1,112 +1,192 @@
-body,html{
-    overflow: auto;
+body,
+html {
+  overflow: auto;
 }
 
-header img{
-    margin: 0px 5px;
+header img {
+  margin: 0px 5px;
 }
-header a{
-    text-decoration: none;
+header a {
+  text-decoration: none;
 }
 .search-container {
-    display: flex;
-    align-items: center;
-    background-color: #fbfbfb;
-    border: 1px solid #ccc;
-    border-radius: 25px;
-    padding: 5px;
-    width:300px
+  display: flex;
+  align-items: center;
+  background-color: #fbfbfb;
+  border: 1px solid #ccc;
+  border-radius: 25px;
+  padding: 5px;
+  width: 300px;
 }
-.search-container label{
-    margin: 0px;
+.search-container label {
+  margin: 0px;
 }
 
 .search-container input {
-    max-width: 300px;
-    border: none;
-    outline: none;
-    flex: 1;
-    border-radius: 25px;    
-    padding: 5px;
+  max-width: 300px;
+  border: none;
+  outline: none;
+  flex: 1;
+  border-radius: 25px;
+  padding: 5px;
 }
 
 .material-symbols-outlined {
-  font-variation-settings:
-  'FILL' 0,
-  'wght' 300,
-  'GRAD' 0,
-  'opsz' 20
+  font-variation-settings: "FILL" 0, "wght" 300, "GRAD" 0, "opsz" 20;
 }
 .feed-options .material-symbols-outlined,
 .acount-configurations .material-symbols-outlined {
-    font-size: 34px;
-    padding: 5px 10px;
-    color: #fbfbfb;
+  font-size: 34px;
+  padding: 5px 10px;
+  color: #fbfbfb;
 }
 .feed-options .material-symbols-outlined:hover,
-.acount-configurations .material-symbols-outlined:hover{
-    background-color: #d1fff0;
-    border-radius: 5px;
+.acount-configurations .material-symbols-outlined:hover {
+  background-color: #d1fff0;
+  border-radius: 5px;
 }
 
 .search-container .material-symbols-outlined {
-    font-size: 24px; 
+  font-size: 24px;
+}
+.user {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
 }
 .feed-container::-webkit-scrollbar {
-    display: none; /* Oculta a barra de rolagem no WebKit (Chrome, Safari) */
+  display: none;
 }
 .feed-container {
-    display: flex;
-    flex-direction: column;
-    margin-top: 70px;
-    max-width: 800px;
-    min-height: 600px;
-    background-color: #fbfbfb;
-    border-radius: 5px;
-    padding: 10px;
-    overflow: auto;
-    
+  display: flex;
+  flex-direction: column;
+  margin-top: 70px;
+  width: 40%;
+  height: auto;
+  background-color: #fbfbfb;
+  border-radius: 5px;
+  padding: 10px;
+  overflow: auto;
 }
 .feed-container img {
-    margin: 5px;
-    max-width: 100%;
-    max-height: 500px;
-    display: block;
+  margin: 5px;
+  max-width: 100%;
+  max-height: 500px;
+  display: block;
 }
-#img-user{
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
+#img-user {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
 }
 .fixed-button {
-    position: fixed; /* Fixa o botão na tela */
-    bottom: 20px; /* Distância da parte inferior da tela */
-    left: 50%; /* Centraliza horizontalmente */
-    transform: translateX(-50%); /* Ajusta a posição para o centro */
-    width: 60px; /* Largura do botão */
-    height: 60px; /* Altura do botão */
-    border-radius: 50%; /* Faz o botão ser redondo */
-    background-color: #199F86; /* Cor de fundo do botão */
-    color: white; /* Cor do texto */
-    border: none; /* Remove a borda padrão */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra do botão */
-    cursor: pointer; /* Muda o cursor para indicar que é clicável */
-    display: flex; /* Usa flexbox para centralizar o conteúdo */
-    align-items: center; /* Centraliza verticalmente */
-    justify-content: center; /* Centraliza horizontalmente */
-    z-index: 1000; /* Garante que o botão esteja acima de outros elementos */
+  position: fixed;
+  bottom: 20px; 
+  left: 50%; 
+  transform: translateX(-50%); 
+  width: 60px;
+  height: 60px; 
+  border-radius: 50%;
+  background-color: #199f86;
+  color: white;
+  border: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+  z-index: 1000;
 }
 
 .fixed-button:hover {
-    background-color: #1BBC9B; 
+  background-color: #1bbc9b;
 }
-#footer{
+.post-form-container {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  width: 80%;
+  max-width: 700px;
+  height: 420px;
+}
+.post-form-container form {
+  display: flex;
+  flex-direction: column;
+  
+}
+.posttxtimg{
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+#posttxt{
+  height: 300px;
+  border-radius: 5px;
+}
+#postimg{
+    width: 300px;
+    padding-left: 0px;
+    height: 25px;
+    border-radius: 0px 7px 0px 7px;
+    background-color: #fbfbfb;
+}
+
+#close-post-form {
+  background-color: #ffd1e4;
+  color: black;
+  border: 1px solid black;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+#close-post-form:hover {
+  background-color: #ffb4d3;
+}
+
+#post{
+  background-color: #d1fff0;
+
+}
+#post:hover{
+  background-color:#abfcdf;
+}
+.post-image {
+    width: 80%;  /* Largura de 80% do feed container */
+    height: 400px;  /* Altura fixa de 400px */
+    object-fit: cover;  /* Ajusta a imagem para cobrir o espaço sem distorção */
     margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  #footer {
+    text-align: center;
+    padding: 20px;
     background-color: #1BBC9B;
-    height: 200px;
-}
-@media (max-width: 543px){
-    .feed-container{
-        margin-top: 115px;
-    }
+    color: #333;
+    font-size: 14px;
+  }
+  
+  .footer-links a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #333;
+  }
+  
+  .social-media a img {
+    width: 24px;
+    margin: 0 8px;
+    vertical-align: middle;
+  }
+@media (max-width: 543px) {
+  .feed-container {
+    margin-top: 115px;
+  }
 }

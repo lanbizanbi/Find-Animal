@@ -2,7 +2,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Find animal | Sobrenós</title>
+    <title>Find animal</title>
 
     <link
       rel="stylesheet"
@@ -37,13 +37,14 @@
   </head>
 
   <body>
+    <header></header>
     <main>
       <div class="contain">
         <h1>Bem-vindo ao FindAnimal!</h1>
 
         <p>
           No FindAnimal, acreditamos que cada animal merece um lar amoroso e
-          seguro. Nossa plataforma é mais do que uma rede social – é um espaço
+          seguro. Nossa plataforma é mais do que uma rede social, é um espaço
           dedicado a ajudar na busca por animais perdidos e promover a adoção
           responsável.
         </p>
@@ -101,7 +102,32 @@
         </ul>
       </div>
 
-      <div id="swiper"></div>
+      <div class="sp">
+        <div class="swiper-container">
+          <button id="prevBtn">&lt</button>
+          <div id="swiper">
+            <img
+              src="static/assets/animal2.jpg"
+              alt="Imagem 1"
+              class="swiper-slide active"
+            />
+            <img
+              src="static/assets/animal4.jpg"
+              alt="Imagem 2"
+              class="swiper-slide"
+            />
+            <img
+              src="static/assets/animal3.jpg"
+              alt="Imagem 3"
+              class="swiper-slide"
+            />
+          </div>
+          <button id="nextBtn">&gt</button>
+        </div>
+        <a href="{{ url_for('login') }}">Login</a>
+        <a href="{{ url_for('register') }}">Cadastre-se</a>
+      </div>
     </main>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
   </body>
 </html>

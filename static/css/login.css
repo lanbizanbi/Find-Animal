@@ -20,3 +20,15 @@ header{
 .aregister a:hover {
     color: #1BBC9B;
 }
+.flash-messages {
+    background-color: #1BBC9B;
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin: 10px 0;
+    color: #333;
+}
+
+.flash-error {
+    background-color: transparent;
+    color: black;
+}

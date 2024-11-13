@@ -1,26 +1,90 @@
+body, html{
+    overflow: auto;
+}
+header{
+    border-radius: 0px;
+    height: 50px;
+}
 main{
-    width: 80%;
-    height: 80%;
+    width: 100vw;
+    height: 100vh;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.contain{
+    margin-left: 30px;
+    width: 800px;
+    padding: 10px;
+    
+    
 }
 h1, h2{
     color: #1BBC9B;
     margin: 5px 0px;
 }
 p{
-    font-size: 17px;
+    font-size: 19px;
 }
-li{
-    margin: 5px 0px
-}
-.contain{
+li {
+    padding-left: 10px; 
+    text-indent: -10px;
     margin-left: 20px;
-    max-width: 550px;
-    
 }
-#swiper{
-    width: 200px;
-    height: 200px;
-    background-color: red;
+.sp{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+a{
+    margin-top: 20px;
+    font-size: 18px;
+}
+a:hover{
+    color: #1BBC9B;
+}
+.swiper-container {
+    display: flex;
+    align-items: center;
+}
+img{
+    margin: 0px;
+    padding: 0px;
+}
+button{
+    background-color: transparent;
+}
+
+#swiper {
+    width: 600px;
+    height: 400px;
+    overflow: hidden;
+    margin: 0 10px;
+    display: flex;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+.swiper-slide {
+    min-width: 100%;
+    transition: transform 0.5s ease;
+    display: none;
+}
+
+.swiper-slide.active {
+    display: block;
+}
+@media (max-width: 1300px) {
+    main {
+        flex-direction: column; 
+        align-items: center; 
+    }
+
+    .contain, .swiper-container {
+        width: 100%;
+        max-width: 100%;
+        margin: 0 20px; 
+    }
 }

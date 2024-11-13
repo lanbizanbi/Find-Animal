@@ -10,27 +10,40 @@
     <link rel="icon" href="{{ url_for('static', filename='assets/favicon-16x16.png') }}" sizes="16x16" type="image/png">
     <link rel="icon" href="{{ url_for('static', filename='assets/favicon-32x32.png') }}" sizes="32x32" type="image/png">
     <link rel="apple-touch-icon" sizes="180x180" href="{{ url_for('static', filename='img/apple-touch-icon.png') }}">
-
 </head>
 <body>
-     <header>
-        
-     </header>
+    <header></header>
 
     <main>
-        <img id="img_findanimal" src="static/assets/logo_find_animal350.png" alt="Logo Find Animal">
-        
-        <div class="login">
-            <label for="lemail">Email
-                <input type="email" name="nemail" id="lemail">
-            </label>
-            
-            <label for="lsenha">Senha
-                <input type="password" name="nsenha" id="lsenha">
-            </label>
-            
-            <button id="entrar">Entrar</button>
-        </div>
+
+        <img id="img_findanimal" src="{{ url_for('static', filename='assets/logo_find_animal350.png') }}" alt="Logo Find Animal">
+
+        <form action="{{ url_for('login') }}" method="POST" id="loginForm">
+            <div class="login">
+                <label for="lemail">Email
+                    <input type="email" name="email" id="lemail" required>
+                </label>
+                
+                <label for="lsenha">Senha
+                    <input type="password" name="password" id="lsenha" required>
+                </label>
+                
+                <button type="submit" id="entrar">Entrar</button>
+
+               <!--flash em caso de erro-->
+                {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                <div class="flash-messages">
+                    {% for category, message in messages %}
+                        {% if category == "error" %}
+                            <p class="flash-{{ category }}">{{ message }}</p>
+                        {% endif %}
+                    {% endfor %}
+                </div>
+            {% endif %}
+        {% endwith %}
+            </div>
+        </form>
         
         <div class="aregister">
             <p>Ainda não tem uma conta?</p>
@@ -38,14 +51,8 @@
         </div>
     </main>
 
-    <footer>
+    <footer></footer>
 
-    </footer>
-    <script>
-        document.getElementById("entrar").addEventListener("click", function() {
-            // Redireciona para home.html
-            window.location.href = "{{ url_for('home') }}";
-        })
-    </script>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
 </body>
 </html>
